@@ -1,3 +1,4 @@
+/// <reference types="@workadventure/iframe-api-typings/iframe_api" />
 
 console.info('Roofs Script started successfully');
 
@@ -35,3 +36,5 @@ WA.onInit().then(() => {
       });
       
 }).catch(e => console.error(e));
+
+export {}
