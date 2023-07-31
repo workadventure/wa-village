@@ -3,11 +3,15 @@
 import "./roofs";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
-import {ActionMessage} from "@workadventure/iframe-api-typings";
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
 
+    await WA.players.configureTracking({
+        players: true,
+        movement: false,
+    });
+    
     const today = new Date();
     const time = today.getHours() + ":" + today.getMinutes();
 
@@ -23,7 +27,7 @@ WA.onInit().then(() => {
     console.log("CURRENT TIME - UCT DIFF = " + timeClient);
 
     // If time hour is between 9h and 18h it's OPEN else it's CLOSED
-    if(timeClient >= 9 & timeClient <= 18) {
+    if(timeClient >= 9 && timeClient <= 18) {
         console.log(">>> OPEN <<<");
     } else {
         console.log(">>> CLOSED <<<");
@@ -33,12 +37,6 @@ WA.onInit().then(() => {
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
-
-    await WA.players.configureTracking({
-        players: true,
-        movement: false,
-    });
-
 
 }).catch(e => console.error(e));
 
