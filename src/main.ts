@@ -6,7 +6,20 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    /*
+
+    WA.ui.actionBar.addButton({
+        id: 'map-btn',
+        // @ts-ignore
+        type: 'action',
+        imageSrc: 'https://workadventudotre.wpcomstaging.com/wp-content/uploads/2023/07/map.svg',
+        toolTip: 'Map overview',
+        callback: (event) => {
+            console.log('Button map overview triggered', event);
+            openMapOverview();
+        }
+    });
+
+
     const today = new Date();
     const time = today.getHours() + ":" + today.getMinutes();
 
@@ -27,7 +40,6 @@ WA.onInit().then(() => {
     } else {
         console.log(">>> CLOSED <<<");
     }
-    */
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
@@ -35,5 +47,16 @@ WA.onInit().then(() => {
     }).catch(e => console.error(e));
 
 }).catch(e => console.error(e));
+
+const openMapOverview = () => {
+    WA.ui.modal.closeModal();
+    WA.ui.modal.openModal({
+        src: "https://hugoaverty.github.io/map-overview/",
+        allow: "fullscreen",
+        title: "Map Overview",
+        allowApi: true,
+        position: "center",
+    });
+}
 
 export {};
