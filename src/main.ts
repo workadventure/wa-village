@@ -1,12 +1,12 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
-// import "./roofs";
+import "./roofs";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    
+    /*
     const today = new Date();
     const time = today.getHours() + ":" + today.getMinutes();
 
@@ -27,6 +27,7 @@ WA.onInit().then(() => {
     } else {
         console.log(">>> CLOSED <<<");
     }
+    */
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
