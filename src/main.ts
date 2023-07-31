@@ -11,7 +11,7 @@ WA.onInit().then(() => {
         id: 'map-btn',
         // @ts-ignore
         type: 'action',
-        imageSrc: 'https://workadventudotre.wpcomstaging.com/wp-content/uploads/2023/07/map.svg',
+        imageSrc: 'https://hugoaverty.github.io/map-overview/img/map.svg',
         toolTip: 'Map overview',
         callback: (event) => {
             console.log('Button map overview triggered', event);
