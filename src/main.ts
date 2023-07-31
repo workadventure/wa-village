@@ -7,10 +7,12 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 // Waiting for the API to be ready
 WA.onInit().then(() => {
 
-    await WA.players.configureTracking({
+    /**
+     await WA.players.configureTracking({
         players: true,
         movement: false,
     });
+    */
     
     const today = new Date();
     const time = today.getHours() + ":" + today.getMinutes();
