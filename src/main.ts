@@ -4,8 +4,8 @@ import "./roofs";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
-let popupPrivateOffice;
-let popupTutorial;
+let popupPrivateOffice: any;
+//let popupTutorial: any;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
