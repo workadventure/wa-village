@@ -12,6 +12,10 @@ let popupPrivateOffice: any;
       players: true,
       movement: false,
     });
+    const players = WA.players.list();
+    for (const player of players) {
+        console.log(`Player ${player.name} is near you`);
+    }
 })();
 
 // Waiting for the API to be ready

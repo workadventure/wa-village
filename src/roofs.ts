@@ -34,6 +34,15 @@ WA.onInit().then(() => {
         WA.room.showLayer("facade-furniture-fg");
         WA.room.showLayer("facade");
       });
+    WA.room.onEnterLayer("doorstep/zone_office").subscribe(() => {
+        const players = WA.players.list();
+        console.log("players");
+        console.log(players);
+        for (const player of players) {
+            console.log(`Player ${player.name} is near you`);
+            console.log(player);
+        }
+    }); 
       
 }).catch(e => console.error(e));
 
