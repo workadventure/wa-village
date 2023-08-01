@@ -5,7 +5,6 @@ import "./roofs";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 let popupPrivateOffice: any;
-//let popupTutorial: any;
 
 (async () => {
     await WA.onInit();
@@ -14,7 +13,11 @@ let popupPrivateOffice: any;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    console.log('Tags: ', WA.player.tags);
+    const userTag = WA.player.tags;
+    console.log('Tags: ', );
+    if(userTag.includes("editor")) {
+        WA.player.setOutlineColor(27, 42, 65);
+    }
 
     if(!WA.player.state.tutorialDone){
         openTutorial();
@@ -93,7 +96,7 @@ const openMapOverview = () => {
 const openTutorial = () => {
     console.info('Open the tutorial');
     // @ts-ignore
-    popupTutorial = WA.ui.modal.openModal({
+    WA.ui.modal.openModal({
         title: "Tutorial",
         src: 'https://workadventure.github.io/scripting-api-extra/tutorialv1.html',
         allow: "fullscreen; clipboard-read; clipboard-write",
