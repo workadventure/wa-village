@@ -8,14 +8,18 @@ let popupPrivateOffice: any;
 
 (async () => {
     await WA.onInit();
-    console.log('Current player name: ', WA.player.name);
+    await WA.players.configureTracking({
+      players: true,
+      movement: false,
+    });
 })();
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
+
+    // If user is admin, name avec dark blue border
     const userTag = WA.player.tags;
-    console.log('Tags: ', );
-    if(userTag.includes("editor")) {
+    if(userTag.includes("admin")) {
         WA.player.setOutlineColor(27, 42, 65);
     }
 
