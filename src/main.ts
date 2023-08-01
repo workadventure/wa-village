@@ -7,8 +7,14 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 let popupPrivateOffice: any;
 //let popupTutorial: any;
 
+(async () => {
+    await WA.onInit();
+    console.log('Current player name: ', WA.player.name);
+})();
+
 // Waiting for the API to be ready
 WA.onInit().then(() => {
+    console.log('Tags: ', WA.player.tags);
 
     if(!WA.player.state.tutorialDone){
         openTutorial();
