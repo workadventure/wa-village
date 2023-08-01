@@ -34,16 +34,25 @@ WA.onInit().then(() => {
         WA.room.showLayer("facade-furniture-fg");
         WA.room.showLayer("facade");
       });
+    /*
     WA.room.onEnterLayer("doorstep/zone_office").subscribe(() => {
         const players = WA.players.list();
         console.log("players");
         console.log(players);
+        let admin: any;
         for (const player of players) {
             console.log(`Player ${player.name} is near you`);
             console.log(player);
+            console.log(player.state.outlineColor);
+            if(player.state._outlineColor == 1780289) {
+                admin++
+            }
+        }
+        if(admin != 0) {
+            console.log("There is no admin");
         }
     }); 
-      
+      */
 }).catch(e => console.error(e));
 
 export {}

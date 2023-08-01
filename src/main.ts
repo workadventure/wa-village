@@ -12,10 +12,6 @@ let popupPrivateOffice: any;
       players: true,
       movement: false,
     });
-    const players = WA.players.list();
-    for (const player of players) {
-        console.log(`Player ${player.name} is near you`);
-    }
 })();
 
 // Waiting for the API to be ready
@@ -26,7 +22,6 @@ WA.onInit().then(() => {
     if(userTag.includes("admin")) {
         WA.player.setOutlineColor(27, 42, 65);
     }
-
     if(!WA.player.state.tutorialDone){
         openTutorial();
     }
@@ -67,6 +62,7 @@ WA.onInit().then(() => {
 
     // EXEMPLE UTC+6
     // IL EST 15H la bas
+    /*
     console.log("CURRENT TIME IS :");
     console.log(time);
     
@@ -82,7 +78,7 @@ WA.onInit().then(() => {
     } else {
         console.log(">>> CLOSED <<<");
     }
-
+    */
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
