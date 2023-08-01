@@ -4,8 +4,19 @@ import "./roofs";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
+let popupPrivateOffice;
+let popupTutorial;
+
 // Waiting for the API to be ready
 WA.onInit().then(() => {
+
+    if(!WA.player.state.tutorialDone){
+        openTutorial();
+    }
+
+    WA.room.onLeaveLayer("start").subscribe(() => {
+        WA.ui.modal.closeModal();
+    });
 
     WA.ui.actionBar.addButton({
         id: 'map-btn',
@@ -18,6 +29,20 @@ WA.onInit().then(() => {
             openMapOverview();
         }
     });
+
+    // Open & Close popupPrivateOffice
+    WA.room.onEnterLayer("popup/popzone_private_office").subscribe(() => {
+        popupPrivateOffice = WA.ui.openPopup("popupPrivateOffice", "Our private office serves as a restricted zone, exclusively accessible to our team members.", [{
+            label: "Close",
+            className: "primary",
+            callback: (popup) => {
+                popup.close();
+            }
+        }]);
+    });
+    WA.room.onLeaveLayer("popup/popzone_private_office").subscribe(() => {
+        popupPrivateOffice.close();
+    })
 
 
     const today = new Date();
@@ -56,6 +81,18 @@ const openMapOverview = () => {
         title: "Map Overview",
         allowApi: true,
         position: "center",
+    });
+}
+
+const openTutorial = () => {
+    console.info('Open the tutorial');
+    // @ts-ignore
+    popupTutorial = WA.ui.modal.openModal({
+        title: "Tutorial",
+        src: 'https://workadventure.github.io/scripting-api-extra/tutorialv1.html',
+        allow: "fullscreen; clipboard-read; clipboard-write",
+        allowApi: true,
+        position: "right",
     });
 }
 
