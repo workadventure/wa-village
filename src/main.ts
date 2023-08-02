@@ -56,13 +56,13 @@ WA.onInit().then(() => {
         popupPrivateOffice.close();
     })
 
-
+    /*
     const today = new Date();
     const time = today.getHours() + ":" + today.getMinutes();
 
     // EXEMPLE UTC+6
     // IL EST 15H la bas
-    /*
+    
     console.log("CURRENT TIME IS :");
     console.log(time);
     
