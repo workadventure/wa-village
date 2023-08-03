@@ -40,6 +40,7 @@ WA.onInit().then(() => {
     WA.room.onLeaveLayer("doorstep/zone_office_silent").subscribe(() => {
         WA.room.hideLayer("silentOverlay");
     });
+
     /*
     WA.room.onEnterLayer("doorstep/zone_office").subscribe(() => {
         const players = WA.players.list();

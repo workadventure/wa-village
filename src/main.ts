@@ -5,6 +5,7 @@ import "./roofs";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 let popupPrivateOffice: any;
+let mapOverview: any;
 
 (async () => {
     await WA.onInit();
@@ -12,13 +13,14 @@ let popupPrivateOffice: any;
       players: true,
       movement: false,
     });
+    await WA.player.getPosition();
 })();
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-
     // If user is admin, name avec dark blue border
     const userTag = WA.player.tags;
+
     if(userTag.includes("admin")) {
         WA.player.setOutlineColor(27, 42, 65);
     }
@@ -56,6 +58,20 @@ WA.onInit().then(() => {
         popupPrivateOffice.close();
     })
 
+    // Open & Close popupPrivateOffice
+    WA.room.onEnterLayer("popup/zone_map_overview").subscribe(() => {
+        mapOverview = WA.ui.displayActionMessage({
+            message: "Press 'SPACE' to display map overview and move to a specific zone. \n \n You can acces to map overview directly on the bottom nav !",
+            callback: () => {
+                openMapOverview();
+            }
+        });
+    });
+    WA.room.onLeaveLayer("popup/zone_map_overview").subscribe(() => {
+        mapOverview.remove();
+        WA.ui.modal.closeModal();
+    })
+
     /*
     const today = new Date();
     const time = today.getHours() + ":" + today.getMinutes();
@@ -82,14 +98,16 @@ WA.onInit().then(() => {
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
+    
     }).catch(e => console.error(e));
 
 }).catch(e => console.error(e));
 
-const openMapOverview = () => {
+const openMapOverview = async() => {
     WA.ui.modal.closeModal();
+    const pos = await WA.player.getPosition();
     WA.ui.modal.openModal({
-        src: "https://hugoaverty.github.io/map-overview/",
+        src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
         allow: "fullscreen",
         title: "Map Overview",
         allowApi: true,
