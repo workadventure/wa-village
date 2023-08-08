@@ -5,7 +5,8 @@ import "./roofs";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 let popupPrivateOffice: any;
-let mapOverview: any;
+let mapOverviewAction: any;
+let mapOverviewPage: any;
 
 (async () => {
     await WA.onInit();
@@ -60,7 +61,7 @@ WA.onInit().then(() => {
 
     // Open & Close popupPrivateOffice
     WA.room.onEnterLayer("popup/zone_map_overview").subscribe(() => {
-        mapOverview = WA.ui.displayActionMessage({
+        mapOverviewAction = WA.ui.displayActionMessage({
             message: "Press 'SPACE' to display map overview and move to a specific zone. \n \n You can acces to map overview directly on the bottom nav !",
             callback: () => {
                 openMapOverview();
@@ -68,7 +69,7 @@ WA.onInit().then(() => {
         });
     });
     WA.room.onLeaveLayer("popup/zone_map_overview").subscribe(() => {
-        mapOverview.remove();
+        mapOverviewAction.remove();
         WA.ui.modal.closeModal();
     })
 
@@ -106,7 +107,7 @@ WA.onInit().then(() => {
 const openMapOverview = async() => {
     WA.ui.modal.closeModal();
     const pos = await WA.player.getPosition();
-    WA.ui.modal.openModal({
+    mapOverviewPage = WA.ui.modal.openModal({
         src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
         allow: "fullscreen",
         title: "Map Overview",
