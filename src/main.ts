@@ -114,6 +114,7 @@ const openMapOverview = async() => {
         allowApi: true,
         position: "center",
     });
+    console.log("mapOverviewPage" + mapOverviewPage);
 }
 
 const openTutorial = () => {
