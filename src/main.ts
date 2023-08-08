@@ -107,7 +107,7 @@ WA.onInit().then(() => {
 const openMapOverview = async() => {
     WA.ui.modal.closeModal();
     const pos = await WA.player.getPosition();
-    mapOverviewPage = WA.ui.modal.openModal({
+    mapOverviewPage = WA.ui.modal.openModal({ 
         src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
         allow: "fullscreen",
         title: "Map Overview",
