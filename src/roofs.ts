@@ -24,16 +24,6 @@ WA.onInit().then(() => {
         WA.room.showLayer("walls-bg-front2");
         WA.room.showLayer("sign2");
     });
-    WA.room.onEnterLayer("rooms_floor").subscribe(() => {
-        WA.room.hideLayer("facade-furniture-bg");
-        WA.room.hideLayer("facade-furniture-fg");
-        WA.room.hideLayer("facade");
-    });
-    WA.room.onLeaveLayer("rooms_floor").subscribe(() => {
-        WA.room.showLayer("facade-furniture-bg");
-        WA.room.showLayer("facade-furniture-fg");
-        WA.room.showLayer("facade");
-    });
     WA.room.onEnterLayer("doorstep/zone_office_silent").subscribe(() => {
         WA.room.showLayer("silentOverlay");
     });
