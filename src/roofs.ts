@@ -38,7 +38,7 @@ WA.onInit().then(() => {
         WA.room.showLayer("silentOverlay");
     });
     WA.room.area.onLeave("silentOffice_area").subscribe(() => {
-        WA.room.hideLayer("silentOverlay");
+        WA.room.hideLayer("silentOverlay"); 
     });
 
     /*
