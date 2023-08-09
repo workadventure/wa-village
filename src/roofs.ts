@@ -4,30 +4,40 @@ console.info('Roofs Script started successfully');
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    WA.room.onEnterLayer("floor1").subscribe(() => {
-        WA.room.hideLayer("roof1");
-        WA.room.hideLayer("walls-bg-front1");
-        WA.room.hideLayer("sign1");
+    WA.room.area.onEnter("roof_conference_area").subscribe(() => {
+        hideRoof1();
     });
-    WA.room.onLeaveLayer("floor1").subscribe(() => {
-        WA.room.showLayer("roof1");
-        WA.room.showLayer("walls-bg-front1");
-        WA.room.showLayer("sign1");
+    WA.room.area.onEnter("roof_coworking_area").subscribe(() => {
+        hideRoof1();
     });
-    WA.room.onEnterLayer("floor2").subscribe(() => {
-        WA.room.hideLayer("roof2");
-        WA.room.hideLayer("walls-bg-front2");
-        WA.room.hideLayer("sign2");
+    WA.room.area.onEnter("roof_office_area").subscribe(() => {
+        hideRoof1();
     });
-    WA.room.onLeaveLayer("floor2").subscribe(() => {
-        WA.room.showLayer("roof2");
-        WA.room.showLayer("walls-bg-front2");
-        WA.room.showLayer("sign2");
+    WA.room.area.onLeave("roof_conference_area").subscribe(() => {
+        showRoof1();
     });
-    WA.room.onEnterLayer("doorstep/zone_office_silent").subscribe(() => {
+    WA.room.area.onLeave("roof_coworking_area").subscribe(() => {
+        showRoof1();
+    });
+    WA.room.area.onLeave("roof_office_area").subscribe(() => {
+        showRoof1();
+    });
+    WA.room.area.onEnter("roof_meeting_area").subscribe(() => {
+        hideRoof2();
+    });
+    WA.room.area.onEnter("roof_show_area").subscribe(() => {
+        hideRoof2();
+    });
+    WA.room.area.onLeave("roof_meeting_area").subscribe(() => {
+        showRoof2();
+    });
+    WA.room.area.onLeave("roof_show_area").subscribe(() => {
+        showRoof2();
+    });
+    WA.room.area.onEnter("silentOffice_area").subscribe(() => {
         WA.room.showLayer("silentOverlay");
     });
-    WA.room.onLeaveLayer("doorstep/zone_office_silent").subscribe(() => {
+    WA.room.area.onLeave("silentOffice_area").subscribe(() => {
         WA.room.hideLayer("silentOverlay");
     });
 
@@ -51,5 +61,22 @@ WA.onInit().then(() => {
     }); 
       */
 }).catch(e => console.error(e));
+
+const hideRoof1 = () => {
+    WA.room.hideLayer("roof1");
+    WA.room.hideLayer("sign1");
+}
+const showRoof1 = () => {
+    WA.room.showLayer("roof1");
+    WA.room.showLayer("sign1");
+}
+const showRoof2 = () => {
+    WA.room.showLayer("roof2");
+    WA.room.showLayer("sign2");
+}
+const hideRoof2 = () => {
+    WA.room.hideLayer("roof2");
+    WA.room.hideLayer("sign2");
+}
 
 export {}

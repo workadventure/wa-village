@@ -46,7 +46,7 @@ WA.onInit().then(() => {
     });
 
     // Open & Close popupPrivateOffice
-    WA.room.onEnterLayer("popup/popzone_private_office").subscribe(() => {
+    WA.room.area.onEnter("popupPrivateOffice_area").subscribe(() => {
         popupPrivateOffice = WA.ui.openPopup("popupPrivateOffice", "Our private office serves as a restricted zone, exclusively accessible to our team members.", [{
             label: "Close",
             className: "primary",
@@ -55,12 +55,12 @@ WA.onInit().then(() => {
             }
         }]);
     });
-    WA.room.onLeaveLayer("popup/popzone_private_office").subscribe(() => {
+    WA.room.area.onLeave("popupPrivateOffice_area").subscribe(() => {
         popupPrivateOffice.close();
     })
 
     // Open & Close popupPrivateOffice
-    WA.room.onEnterLayer("popup/zone_map_overview").subscribe(() => {
+    WA.room.area.onEnter("zone_map_overview").subscribe(() => {
         mapOverviewAction = WA.ui.displayActionMessage({
             message: "Press 'SPACE' to display map overview and move to a specific zone. \n \n You can acces to map overview directly on the bottom nav !",
             callback: () => {
@@ -68,7 +68,7 @@ WA.onInit().then(() => {
             }
         });
     });
-    WA.room.onLeaveLayer("popup/zone_map_overview").subscribe(() => {
+    WA.room.area.onLeave("zone_map_overview").subscribe(() => {
         mapOverviewAction.remove();
         WA.ui.modal.closeModal();
     })
