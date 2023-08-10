@@ -1,10 +1,11 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
+import { Popup } from "@workadventure/iframe-api-typings";
 import "./roofs";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
-let popupPrivateOffice: any;
+let popupPrivateOffice: Popup|null;
 let mapOverviewAction: any;
 let mapOverviewPage: any;
 
@@ -47,19 +48,22 @@ WA.onInit().then(() => {
 
     // Open & Close popupPrivateOffice
     WA.room.area.onEnter("popupPrivateOffice_area").subscribe(() => {
+        if(popupPrivateOffice) return;
         popupPrivateOffice = WA.ui.openPopup("popupPrivateOffice", "Our private office serves as a restricted zone, exclusively accessible to our team members.", [{
             label: "Close",
             className: "primary",
-            callback: (popup) => {
-                popup.close();
+            callback: () => {
+                popupPrivateOffice?.close();
+                popupPrivateOffice = null;
             }
         }]);
     });
     WA.room.area.onLeave("popupPrivateOffice_area").subscribe(() => {
-        popupPrivateOffice.close();
+        popupPrivateOffice?.close();
+        popupPrivateOffice = null;
     })
 
-    // Open & Close popupPrivateOffice
+
     WA.room.area.onEnter("zone_map_overview").subscribe(() => {
         mapOverviewAction = WA.ui.displayActionMessage({
             message: "Press 'SPACE' to display map overview and move to a specific zone. \n \n You can acces to map overview directly on the bottom nav !",
