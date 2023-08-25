@@ -2113,6 +2113,61 @@
                  "width":32,
                  "x":2752,
                  "y":1888
+                }, 
+                {
+                 "class":"area",
+                 "height":32,
+                 "id":1058,
+                 "name":"david",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":2976,
+                 "y":2400
+                }, 
+                {
+                 "class":"area",
+                 "height":32,
+                 "id":1059,
+                 "name":"gregoire",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":2976,
+                 "y":2272
+                }, 
+                {
+                 "class":"area",
+                 "height":32,
+                 "id":1060,
+                 "name":"alexis",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":2752,
+                 "y":2400
+                }, 
+                {
+                 "class":"area",
+                 "height":32,
+                 "id":1061,
+                 "name":"gregory",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":2976,
+                 "y":2208
+                }, 
+                {
+                 "class":"area",
+                 "height":32,
+                 "id":1063,
+                 "name":"hugo",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":2976,
+                 "y":2016
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4692,7 +4747,7 @@
          "y":0
         }],
  "nextlayerid":121,
- "nextobjectid":1058,
+ "nextobjectid":1064,
  "orientation":"orthogonal",
  "properties":[
         {
