@@ -3,6 +3,10 @@
 import { Popup } from "@workadventure/iframe-api-typings";
 import "./roofs";
 
+// Scavenger
+import "./scavenger/secretWay.ts";
+//import "./scavenger/secretSentence.ts";
+
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 let popupPrivateOffice: Popup|null;
@@ -20,9 +24,9 @@ let mapOverviewPage: any;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    // If user is admin, name avec dark blue border
     const userTag = WA.player.tags;
 
+    // If user is admin, name it with a dark blue border
     if(userTag.includes("admin")) {
         WA.player.setOutlineColor(27, 42, 65);
     }
