@@ -159,7 +159,7 @@ function initGame(root: string) {
                         // go to form
                         WA.ui.modal.openModal({
                             title: "Prize",
-                            src: "https://workadventu.re/",
+                            src: "https://blocksurvey.io/nftbiarritz-2023-VCYczIDFT2qN2NkIyoF99A-o",
                             allowApi: true,
                             allow: "microphone; camera",
                             position: "center",
