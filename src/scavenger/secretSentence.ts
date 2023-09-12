@@ -21,6 +21,13 @@ interface ScavengerProgress {
     scavengerObject5: boolean,
 }
 
+const defaultScavengerProgress: ScavengerProgress = {
+    scavengerObject1: false,
+    scavengerObject2: false,
+    scavengerObject3: false,
+    scavengerObject4: false,
+    scavengerObject5: false
+}
 let formPopup: Popup|undefined = undefined
 let blockExit1Popup: Popup|undefined = undefined
 let blockExit2Popup: Popup|undefined = undefined
@@ -31,44 +38,47 @@ let isOpenSecretSentenceWebsite = false
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    // ignore the scavenger if it has been already done 
-    if (WA.player.state.scavengerCompleted) return
-
     // force user to read the instructions
     WA.controls.disablePlayerControls()
 
     const mapUrl = WA.room.mapURL
     const root = mapUrl.substring(0, mapUrl.lastIndexOf("/"))
     
-    // open scavenger instructions
-    WA.ui.modal.openModal({
-        title: "Scavenger hunt instructions",
-        src: root + "/scavenger/instructions.html",
-        allowApi: true,
-        allow: "microphone; camera",
-        position: "center",
-    }, () => {
-        initGame(root)
-        WA.ui.modal.closeModal()
-        getClueRegularly()
-        WA.ui.actionBar.removeButton("start")
-    })
-
-    // add start button
-    WA.ui.actionBar.addButton({
-        id: "start",
-        label: "Let's go!",
-        callback: () => {
-            initGame(root)
+    if (WA.player.state.scavengerCompleted === true) {
+        console.log("scavenger completed")
+        configureScavenger(root)
+    } else {
+        console.log("scavenger not completed")
+        // open scavenger instructions
+        WA.ui.modal.openModal({
+            title: "Scavenger hunt instructions",
+            src: root + "/scavenger/instructions.html",
+            allowApi: true,
+            allow: "microphone; camera",
+            position: "center",
+        }, () => {
+            configureScavenger(root)
             WA.ui.modal.closeModal()
             getClueRegularly()
             WA.ui.actionBar.removeButton("start")
-        }
-    })
+        })
+
+        // add start button
+        WA.ui.actionBar.addButton({
+            id: "start",
+            label: "Let's go!",
+            callback: () => {
+                configureScavenger(root)
+                WA.ui.modal.closeModal()
+                getClueRegularly()
+                WA.ui.actionBar.removeButton("start")
+            }
+        })
+    }
 })
 
 // function to init the game
-function initGame(root: string) {
+function configureScavenger(root: string) {
     WA.controls.restorePlayerControls()
     
     // add secret sentence button
@@ -103,19 +113,18 @@ function initGame(root: string) {
     })
 
     // init player state
-    if(!WA.player.state.scavengerProgress) {
-        WA.player.state.scavengerProgress = {
-            scavengerObject1: false,
-            scavengerObject2: false,
-            scavengerObject3: false,
-            scavengerObject4: false,
-            scavengerObject5: false
-        }
+    if(!WA.player.state.hasVariable("scavengerProgress")) {
+        console.log("reset default scavenger values",)
+        WA.player.state.saveVariable("scavengerProgress", defaultScavengerProgress, {
+            public: true, persist: true
+        })
+        WA.player.state.scavengerCompleted = false
     }
 
     // init user interaction
     for(const object of [...scavengerObjects.keys()]) {
         WA.room.area.onEnter(object).subscribe(() => {
+            console.log("scavengerProgress",WA.player.state.scavengerProgress)
             // @ts-ignore
             if((WA.player.state.scavengerProgress as ScavengerProgress)[object] === true) return
             // @ts-ignore
@@ -127,7 +136,7 @@ function initGame(root: string) {
             })
 
             WA.ui.modal.openModal({
-                title: "Congarts, you found a new time objects 🎉",
+                title: "Congarts, you found a new time object 🎉",
                 src: root + `/scavenger/congratulations.html?current=${object}&scavengerObjects=${objectsFound.join(",")}`,
                 allowApi: true,
                 allow: "microphone; camera",
@@ -171,6 +180,7 @@ function initGame(root: string) {
                     })
                 }
             ])
+            WA.player.state.scavengerCompleted = true
         } else {
             formPopup = WA.ui.openPopup("formPopup", "You are missing objects to access the form 😭\n\rAs we are very nice, a clue will appear 💪",
             [
