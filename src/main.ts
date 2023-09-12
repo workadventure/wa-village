@@ -4,8 +4,8 @@ import { Popup } from "@workadventure/iframe-api-typings";
 import "./roofs";
 
 // Scavenger
+import "./scavenger/secretSentence.ts";
 import "./scavenger/secretWay.ts";
-//import "./scavenger/secretSentence.ts";
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
@@ -30,9 +30,10 @@ WA.onInit().then(() => {
     if(userTag.includes("admin")) {
         WA.player.setOutlineColor(27, 42, 65);
     }
+    /* uncomment after scavenger
     if(!WA.player.state.tutorialDone){
         openTutorial();
-    }
+    }*/
 
     WA.room.onLeaveLayer("start").subscribe(() => {
         WA.ui.modal.closeModal();

@@ -2071,7 +2071,7 @@
                 }, 
                 {
                  "class":"area",
-                 "height":188,
+                 "height":176.757026858214,
                  "id":1050,
                  "name":"zone_office",
                  "properties":[
@@ -2097,8 +2097,8 @@
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":130,
-                 "x":3272,
+                 "width":89.6188198933646,
+                 "x":3291.76906268003,
                  "y":2337.33333333333
                 }, 
                 {
@@ -2299,6 +2299,127 @@
                  "width":32,
                  "x":2976,
                  "y":2016
+                }, 
+                {
+                 "class":"area",
+                 "height":84.356385196761,
+                 "id":1064,
+                 "name":"scavengerObject1",
+                 "rotation":0,
+                 "visible":true,
+                 "width":82.1452472172618,
+                 "x":3208.43372001438,
+                 "y":2346.90665026008
+                }, 
+                {
+                 "class":"area",
+                 "height":103.53552494336,
+                 "id":1065,
+                 "name":"scavengerObject2",
+                 "rotation":0,
+                 "visible":true,
+                 "width":95.4337074993516,
+                 "x":1696,
+                 "y":1771.13798370672
+                }, 
+                {
+                 "class":"area",
+                 "height":96,
+                 "id":1066,
+                 "name":"scavengerObject3",
+                 "rotation":0,
+                 "visible":true,
+                 "width":64,
+                 "x":1792,
+                 "y":672
+                }, 
+                {
+                 "class":"area",
+                 "height":83.9818304190519,
+                 "id":1067,
+                 "name":"scavengerObject4",
+                 "rotation":0,
+                 "visible":true,
+                 "width":96,
+                 "x":4640,
+                 "y":1312
+                }, 
+                {
+                 "class":"area",
+                 "height":113.74293159122,
+                 "id":1068,
+                 "name":"scavengerObject5",
+                 "rotation":0,
+                 "visible":true,
+                 "width":96,
+                 "x":5888,
+                 "y":384
+                }, 
+                {
+                 "class":"area",
+                 "height":46.4703524093084,
+                 "id":1069,
+                 "name":"blockExit1",
+                 "rotation":0,
+                 "visible":true,
+                 "width":162.73674985505,
+                 "x":1753.93794123203,
+                 "y":2969.47261093917
+                }, 
+                {
+                 "class":"",
+                 "height":96,
+                 "id":1070,
+                 "name":"blockExit1Popup",
+                 "rotation":0,
+                 "visible":true,
+                 "width":192,
+                 "x":1760,
+                 "y":2848
+                }, 
+                {
+                 "class":"area",
+                 "height":46.4704,
+                 "id":1071,
+                 "name":"blockExit2",
+                 "rotation":0,
+                 "visible":true,
+                 "width":162.737,
+                 "x":5696,
+                 "y":2521.47
+                }, 
+                {
+                 "class":"",
+                 "height":96,
+                 "id":1072,
+                 "name":"blockExit2Popup",
+                 "rotation":0,
+                 "visible":true,
+                 "width":192,
+                 "x":5702.06,
+                 "y":2400
+                }, 
+                {
+                 "class":"area",
+                 "height":164.287376737919,
+                 "id":1073,
+                 "name":"form",
+                 "rotation":0,
+                 "visible":true,
+                 "width":164.89985912905,
+                 "x":2976,
+                 "y":2843.71262326208
+                }, 
+                {
+                 "class":"",
+                 "height":128,
+                 "id":1074,
+                 "name":"formPopup",
+                 "rotation":0,
+                 "visible":true,
+                 "width":320,
+                 "x":2976,
+                 "y":2688
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4878,7 +4999,7 @@
          "y":0
         }],
  "nextlayerid":137,
- "nextobjectid":1064,
+ "nextobjectid":1075,
  "orientation":"orthogonal",
  "properties":[
         {

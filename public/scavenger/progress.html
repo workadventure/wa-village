@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Progress</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./css.css">
+    </head>
+    <body>
+        <h1>Your progress ⏳</h1>
+        <!-- show objects found -->
+        <p id="scavengerObject1">2020: ...</p>
+        <p id="scavengerObject2">2021: ...</p>
+        <p id="scavengerObject3">2022: ...</p>
+        <p id="scavengerObject4">2023: ...</p>
+        <p id="scavengerObject5">2024: ...</p>
+
+        <!-- show badge with picture associated -->
+        <div class="badges" style="display:flex;flex-direction: row;justify-content: center;align-items: center;">
+            <img id="badge-scavengerObject1" src="./images/scavengerObject1.png" alt="badge object 1" style="display: none;">
+            <img id="badge-scavengerObject2" src="./images/scavengerObject2.png" alt="badge object 2" style="display: none;">
+            <img id="badge-scavengerObject3" src="./images/scavengerObject3.png" alt="badge object 3" style="display: none;">
+            <img id="badge-scavengerObject4" src="./images/scavengerObject4.png" alt="badge object 4" style="display: none;">
+            <img id="badge-scavengerObject5" src="./images/scavengerObject5.png" alt="badge object 5" style="display: none;">
+        </div>
+
+        <p style="display: none;" id="clueTitle">Last clue:</p>
+        <p id="lastClue" style="font-weight: bold;"></p>
+
+        <script type="text/javascript">
+            const sentence = {
+                scavengerObject1: "WorkAdventure's journey began in 2020, openly sharing with the world.",
+                scavengerObject2: "In 2021, we started reshaping recruitment, onboarding, and training.",
+                scavengerObject3: "2022 saw our commitment to sustainability, GDPR compliance, and efficiency.",
+                scavengerObject4: "In 2023, we embraced Single Sign-On (SSO) and full customization.",
+                scavengerObject5: "2024 brings the promise of enhanced collaborations and gamification.",
+            }
+
+            const clues = {
+                scavengerObject1: "We did not place the objects on the ground, we are not savages :p",
+                scavengerObject2: "Nothing like a simple wooden table to highlight an object.",
+                scavengerObject3: "Don't be afraid of getting wet.",
+                scavengerObject4: "A sky full of colors...",
+                scavengerObject5: "Enough talking about us. Come on stage and introduce yourself!",
+            }
+
+            const url = new URL(window.location.toString())
+            const objectsFound = url.searchParams.get("scavengerObjects")
+            // show objects found by user
+            if(objectsFound) {
+                for(const obj of Object.keys(sentence)) {
+                    if(objectsFound.indexOf(obj) != -1) {
+                        document.getElementById(obj).innerHTML = sentence[obj]
+                        document.getElementById(`badge-${obj}`).style.display = "block"
+                    }
+                }
+            }
+
+            // show the last clue
+            const currentClue = url.searchParams.get("lastClue")
+            if(currentClue != undefined && currentClue !== "noclue" && currentClue !== "undefined") {
+                document.getElementById("clueTitle").style.display = "block"
+                document.getElementById("lastClue").innerHTML = clues[currentClue]
+            }
+        </script>
+    </body>
+</html>

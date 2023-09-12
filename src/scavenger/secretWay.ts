@@ -42,7 +42,7 @@ const secretAreas = [
     "secretArea22",
     "secretArea23",
     "secretArea24",
-];
+]
 
 const secretTiles = [
     { x: 52, y: 27},
@@ -69,7 +69,7 @@ const secretTiles = [
     { x: 59, y: 23},
     { x: 58, y: 23},
     { x: 57, y: 23},
-];
+]
 
 const signRightTile = "sign-right"
 const woodenTileTile = "wooden-tile"
@@ -114,7 +114,7 @@ WA.onInit().then(() => {
         WA.room.area.onLeave(secretAreas[i]).subscribe(() => {
             setTimeout(() => {
                 WA.room.setTiles(tilesToHide)
-            }, 100);
+            }, 100)
         })
     }
 });
