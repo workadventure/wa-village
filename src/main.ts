@@ -126,6 +126,7 @@ const openMapOverview = async() => {
     console.log("mapOverviewPage" + mapOverviewPage);
 }
 
+/* uncomment after scavenger
 const openTutorial = () => {
     console.info('Open the tutorial');
     // @ts-ignore
@@ -136,6 +137,6 @@ const openTutorial = () => {
         allowApi: true,
         position: "right",
     });
-}
+}*/
 
 export {};
