@@ -2236,6 +2236,12 @@
                  "height":116.914395703685,
                  "id":1073,
                  "name":"form",
+                 "properties":[
+                        {
+                         "name":"silent",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "visible":true,
                  "width":74.2977776740436,
