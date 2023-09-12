@@ -25,41 +25,7 @@
         <p style="display: none;" id="clueTitle">Last clue:</p>
         <p id="lastClue" style="font-weight: bold;"></p>
 
-        <script type="text/javascript">
-            const sentence = {
-                scavengerObject1: "WorkAdventure's journey began in 2020, openly sharing with the world.",
-                scavengerObject2: "In 2021, we started reshaping recruitment, onboarding, and training.",
-                scavengerObject3: "2022 saw our commitment to sustainability, GDPR compliance, and efficiency.",
-                scavengerObject4: "In 2023, we embraced Single Sign-On (SSO) and full customization.",
-                scavengerObject5: "2024 brings the promise of enhanced collaborations and gamification.",
-            }
-
-            const clues = {
-                scavengerObject1: "We did not place the objects on the ground, we are not savages :p",
-                scavengerObject2: "Nothing like a simple wooden table to highlight an object.",
-                scavengerObject3: "Don't be afraid of getting wet.",
-                scavengerObject4: "A sky full of colors...",
-                scavengerObject5: "Enough talking about us. Come on stage and introduce yourself!",
-            }
-
-            const url = new URL(window.location.toString())
-            const objectsFound = url.searchParams.get("scavengerObjects")
-            // show objects found by user
-            if(objectsFound) {
-                for(const obj of Object.keys(sentence)) {
-                    if(objectsFound.indexOf(obj) != -1) {
-                        document.getElementById(obj).innerHTML = sentence[obj]
-                        document.getElementById(`badge-${obj}`).style.display = "block"
-                    }
-                }
-            }
-
-            // show the last clue
-            const currentClue = url.searchParams.get("lastClue")
-            if(currentClue != undefined && currentClue !== "noclue" && currentClue !== "undefined") {
-                document.getElementById("clueTitle").style.display = "block"
-                document.getElementById("lastClue").innerHTML = clues[currentClue]
-            }
-        </script>
+        <script src="https://play.workadventu.re/iframe_api.js"></script>
+        <script type="module" src="./progress.ts"></script>
     </body>
 </html>

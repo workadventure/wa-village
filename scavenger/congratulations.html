@@ -42,29 +42,7 @@
             <img id="badge-scavengerObject5" src="./images/scavengerObject5.png" alt="badge object 5" style="display: none;">
         </div>
 
-        <script type="text/javascript">
-            const sentence = {
-                scavengerObject1: "WorkAdventure's journey began in 2020, openly sharing with the world.",
-                scavengerObject2: "In 2021, we started reshaping recruitment, onboarding, and training.",
-                scavengerObject3: "2022 saw our commitment to sustainability, GDPR compliance, and efficiency.",
-                scavengerObject4: "In 2023, we embraced Single Sign-On (SSO) and full customization.",
-                scavengerObject5: "2024 brings the promise of enhanced collaborations and gamification.",
-            }
-            const url = new URL(window.location.toString())
-            const objectsFound = url.searchParams.get("scavengerObjects")
-
-            // show last object find by user
-            const currentObjectFound = url.searchParams.get("current")
-            document.getElementById("lastSentence").innerHTML = sentence[currentObjectFound]??''
-            document.getElementById(`badgefound-${currentObjectFound}`).style.display = "inline-block"
-
-            // show all objects found by user
-            for(const obj of Object.keys(sentence)) {
-                if(objectsFound.indexOf(obj) != -1) {
-                    document.getElementById(obj).innerHTML = sentence[obj]
-                    document.getElementById(`badge-${obj}`).style.display = "block"
-                }
-            }
-        </script>        
+        <script src="https://play.workadventu.re/iframe_api.js"></script>
+        <script type="module" src="./congratulations.ts"></script>   
     </body>
 </html>
