@@ -46,7 +46,6 @@ WA.onInit().then(() => {
         imageSrc: 'https://hugoaverty.github.io/map-overview/img/map.svg',
         toolTip: 'Map overview',
         callback: (event) => {
-            console.log('Button map overview triggered', event);
             openMapOverview();
         }
     });
@@ -123,7 +122,6 @@ const openMapOverview = async() => {
         allowApi: true,
         position: "center",
     });
-    console.log("mapOverviewPage" + mapOverviewPage);
 }
 
 /* uncomment after scavenger
