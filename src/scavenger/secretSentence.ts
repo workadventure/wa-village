@@ -127,7 +127,7 @@ function initGame(root: string) {
             })
 
             WA.ui.modal.openModal({
-                title: "Congarts, you found a new timeline stamp 🎉",
+                title: "Congarts, you found a new time objects 🎉",
                 src: root + `/scavenger/congratulations.html?current=${object}&scavengerObjects=${objectsFound.join(",")}`,
                 allowApi: true,
                 allow: "microphone; camera",
