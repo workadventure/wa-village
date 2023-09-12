@@ -152,7 +152,7 @@ function initGame(root: string) {
             (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 && 
             (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject5) {
             stopClueRegularly()
-            formPopup = WA.ui.openPopup("formPopup", "Congrats! You found all the secret sentences and completed the story 🎉🎉🎉", [{
+            formPopup = WA.ui.openPopup("formPopup", "🎉🎉 Hurray! You've found all the time objects! Now you know our whole story 🎉🎉", [{
                     label: "Claim your prize",
                     className: "primary",
                     callback: (popup => {
