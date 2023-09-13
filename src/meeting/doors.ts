@@ -6,13 +6,13 @@ console.log('Doors script loaded');
 WA.onInit().then(() => {
     // When user enter ine zone `zone_office_meeting`, display layer `door_office_meeting_closed`
     WA.room.area.onEnter('zone_office_meeting').subscribe(() => {
-        WA.room.hideLayer('door_office_meeting_closed');
-        WA.room.showLayer('door_office_meeting_opened');
+        WA.room.hideLayer('doors/door_office_meeting_closed');
+        WA.room.showLayer('doors/door_office_meeting_opened');
     });
 
     WA.room.area.onLeave('zone_office_meeting').subscribe(() => {
-        WA.room.showLayer('door_office_meeting_closed');
-        WA.room.hideLayer('door_office_meeting_opened');
+        WA.room.showLayer('doors/door_office_meeting_closed');
+        WA.room.hideLayer('doors/door_office_meeting_opened');
     });
 
 });
