@@ -55,13 +55,7 @@ WA.onInit().then(() => {
 
     if (instructionsElement) {
         instructionsElement.onclick = () => {
-            WA.ui.modal.openModal({
-                title: "Scavenger hunt instructions",
-                src: root + "/scavenger/instructions.html",
-                allowApi: true,
-                allow: "microphone; camera",
-                position: "center",
-            })
+            window.location.href = root + "/scavenger/instructions.html"
         }
     }
 })
