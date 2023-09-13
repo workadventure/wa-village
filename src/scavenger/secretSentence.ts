@@ -1,4 +1,5 @@
 /// <reference types="@workadventure/iframe-api-typings" />
+import { bootstrapExtra } from "@workadventure/scripting-api-extra"
 
 import { Popup } from "@workadventure/iframe-api-typings"
 import { CLUE_1, CLUE_2, CLUE_3, CLUE_4, CLUE_5, CLUE_TIMEOUT } from './constants'
@@ -41,7 +42,9 @@ WA.onInit().then(() => {
     // force user to read the instructions
     WA.controls.disablePlayerControls()
 
-    const mapUrl = WA.room.mapURL
+    // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
+    bootstrapExtra().then(() => {
+        const mapUrl = WA.room.mapURL
     const root = mapUrl.substring(0, mapUrl.lastIndexOf("/"))
 
     console.log("scavengerProgress",WA.player.state.scavengerProgress)
@@ -52,11 +55,12 @@ WA.onInit().then(() => {
         configureScavenger(root)
     } else if (
         // If at least one object has been found, don't show instructions
-        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject1 || 
+        WA.player.state.scavengerProgress &&
+        ((WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject1 || 
         (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject2 || 
         (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject3 || 
         (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 || 
-        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject5) {
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject5)) {
         console.log("scavenger not completed")
         configureScavenger(root)
         getClueRegularly()
@@ -88,6 +92,7 @@ WA.onInit().then(() => {
             }
         })
     }
+    }).catch(e => console.error(e));
 })
 
 // function to init the game
