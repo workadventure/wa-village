@@ -115,9 +115,7 @@ function configureScavenger(root: string) {
     // init player state
     if(!WA.player.state.hasVariable("scavengerProgress")) {
         console.log("reset default scavenger values",)
-        WA.player.state.saveVariable("scavengerProgress", defaultScavengerProgress, {
-            public: true, persist: true
-        })
+        WA.player.state.scavengerProgress = defaultScavengerProgress
         WA.player.state.scavengerCompleted = false
     }
 
@@ -129,7 +127,7 @@ function configureScavenger(root: string) {
             if((WA.player.state.scavengerProgress as ScavengerProgress)[object] === true) return
             // @ts-ignore
             (WA.player.state.scavengerProgress as ScavengerProgress)[object] = true
-
+            WA.player.state.scavengerProgress = WA.player.state.scavengerProgress
             const objectsFound = Object.keys(WA.player.state.scavengerProgress as ScavengerProgress).filter((object) => {
                 // @ts-ignore
                 return (WA.player.state.scavengerProgress as ScavengerProgress)[object] === true
