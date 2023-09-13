@@ -1625,44 +1625,6 @@
                 }, 
                 {
                  "height":0,
-                 "id":1017,
-                 "name":"doorOfficeMeeting",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"closeLayer",
-                         "type":"string",
-                         "value":"doors\/door_office_meeting_closed"
-                        }, 
-                        {
-                         "name":"default",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"door",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openLayer",
-                         "type":"string",
-                         "value":"doors\/door_office_meeting_open"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":90,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":3230,
-                 "y":2135.5
-                }, 
-                {
-                 "height":0,
                  "id":1018,
                  "name":"doorOffice2",
                  "point":true,
@@ -1980,12 +1942,6 @@
                  "height":107.5,
                  "id":1054,
                  "name":"zone_office_meeting",
-                 "properties":[
-                        {
-                         "name":"zone",
-                         "type":"string",
-                         "value":"zone_office_meeting"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
