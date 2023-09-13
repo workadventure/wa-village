@@ -28,6 +28,10 @@ WA.onInit().then(() => {
     const lastClue = url.searchParams.get("lastClue")
     const lastClueElement = document.getElementById("lastClue")
     const clueTitleElement = document.getElementById("clueTitle")
+    const instructionsElement = document.getElementById("instructions")
+
+    const mapUrl = WA.room.mapURL
+    const root = mapUrl.substring(0, mapUrl.lastIndexOf("/"))
     
     // show all objects found by user
     for(const obj of Object.keys(sentence)) {
@@ -47,6 +51,18 @@ WA.onInit().then(() => {
         lastClueElement.innerHTML = clues[lastClue]
         clueTitleElement.style.display = "block"
         
+    }
+
+    if (instructionsElement) {
+        instructionsElement.onclick = () => {
+            WA.ui.modal.openModal({
+                title: "Scavenger hunt instructions",
+                src: root + "/scavenger/instructions.html",
+                allowApi: true,
+                allow: "microphone; camera",
+                position: "center",
+            })
+        }
     }
 })
 

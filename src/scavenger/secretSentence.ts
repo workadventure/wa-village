@@ -43,12 +43,25 @@ WA.onInit().then(() => {
 
     const mapUrl = WA.room.mapURL
     const root = mapUrl.substring(0, mapUrl.lastIndexOf("/"))
+
+    console.log("scavengerProgress",WA.player.state.scavengerProgress)
     
+    // If the game is completed, just configure the popups, hidden tiles...
     if (WA.player.state.scavengerCompleted === true) {
         console.log("scavenger completed")
         configureScavenger(root)
-    } else {
+    } else if (
+        // If at least one object has been found, don't show instructions
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject1 || 
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject2 || 
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject3 || 
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 || 
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject5) {
         console.log("scavenger not completed")
+        configureScavenger(root)
+        getClueRegularly()
+    } else {
+        // If no object has been found, show instructions and let's go button
         // open scavenger instructions
         WA.ui.modal.openModal({
             title: "Scavenger hunt instructions",
@@ -122,7 +135,6 @@ function configureScavenger(root: string) {
     // init user interaction
     for(const object of [...scavengerObjects.keys()]) {
         WA.room.area.onEnter(object).subscribe(() => {
-            console.log("scavengerProgress",WA.player.state.scavengerProgress)
             // @ts-ignore
             if((WA.player.state.scavengerProgress as ScavengerProgress)[object] === true) return
             // @ts-ignore
@@ -146,6 +158,7 @@ function configureScavenger(root: string) {
             lastClue = "noclue"
             stopClueRegularly()
             WA.ui.banner.closeBanner()
+            console.log("scavengerProgress",WA.player.state.scavengerProgress)
         })
 
         WA.room.area.onLeave(object).subscribe(() => WA.ui.modal.closeModal())
