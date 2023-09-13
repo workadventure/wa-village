@@ -13,7 +13,6 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 let popupPrivateOffice: Popup|null;
 let mapOverviewAction: any;
-let mapOverviewPage: any;
 
 (async () => {
     await WA.onInit();
@@ -47,7 +46,7 @@ WA.onInit().then(() => {
         type: 'action',
         imageSrc: 'https://hugoaverty.github.io/map-overview/img/map.svg',
         toolTip: 'Map overview',
-        callback: (event) => {
+        callback: () => {
             openMapOverview();
         }
     });
@@ -117,7 +116,7 @@ WA.onInit().then(() => {
 const openMapOverview = async() => {
     WA.ui.modal.closeModal();
     const pos = await WA.player.getPosition();
-    mapOverviewPage = WA.ui.modal.openModal({ 
+    WA.ui.modal.openModal({ 
         src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
         allow: "fullscreen",
         title: "Map Overview",
