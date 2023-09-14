@@ -46,12 +46,9 @@ WA.onInit().then(() => {
     bootstrapExtra().then(() => {
         const mapUrl = WA.room.mapURL
     const root = mapUrl.substring(0, mapUrl.lastIndexOf("/"))
-
-    console.log("scavengerProgress",WA.player.state.scavengerProgress)
     
     // If the game is completed, just configure the popups, hidden tiles...
     if (WA.player.state.scavengerCompleted === true) {
-        console.log("scavenger completed")
         configureScavenger(root)
     } else if (
         // If at least one object has been found, don't show instructions
@@ -61,7 +58,6 @@ WA.onInit().then(() => {
         (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject3 || 
         (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 || 
         (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject5)) {
-        console.log("scavenger not completed")
         configureScavenger(root)
         getClueRegularly()
     } else {
@@ -132,7 +128,6 @@ function configureScavenger(root: string) {
 
     // init player state
     if(!WA.player.state.hasVariable("scavengerProgress")) {
-        console.log("reset default scavenger values",)
         WA.player.state.scavengerProgress = defaultScavengerProgress
         WA.player.state.scavengerCompleted = false
     }
@@ -163,7 +158,6 @@ function configureScavenger(root: string) {
             lastClue = "noclue"
             stopClueRegularly()
             WA.ui.banner.closeBanner()
-            console.log("scavengerProgress",WA.player.state.scavengerProgress)
         })
 
         WA.room.area.onLeave(object).subscribe(() => WA.ui.modal.closeModal())
