@@ -177,8 +177,8 @@ function configureScavenger(root: string) {
                     callback: (popup => {
                         // go to form
                         WA.ui.modal.openModal({
-                            title: "Prize",
-                            src: "https://blocksurvey.io/nftbiarritz-2023-VCYczIDFT2qN2NkIyoF99A-o",
+                            title: "Redeem form",
+                            src: "https://docs.google.com/forms/d/e/1FAIpQLSd9L_rP8MspsfOTV6fH882BYbYbArWUuZP1Cf-QN0WUSJVu3g/viewform",
                             allowApi: true,
                             allow: "microphone; camera",
                             position: "center",
