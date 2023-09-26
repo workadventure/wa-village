@@ -36,7 +36,7 @@ WA.onInit().then(() => {
         openTutorial();
     }*/
 
-    WA.room.onLeaveLayer("start").subscribe(() => {
+    WA.room.onLeave("start").subscribe(() => {
         WA.ui.modal.closeModal();
     });
 
