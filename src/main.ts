@@ -36,7 +36,7 @@ WA.onInit().then(() => {
         openTutorial();
     }*/
 
-    WA.room.onLeave("start").subscribe(() => {
+    WA.room.onLeaveLayer("start").subscribe(() => {
         WA.ui.modal.closeModal();
     });
 
@@ -88,10 +88,10 @@ WA.onInit().then(() => {
 
     // EXEMPLE UTC+6
     // IL EST 15H la bas
-    
+
     console.log("CURRENT TIME IS :");
     console.log(time);
-    
+
     const utcDifference = -(new Date().getTimezoneOffset() / 60) - 2; // Difference between User UTC and Workaventure UTC (UTC - UTC+2);
     console.log("CURRENT UTC - UTC+2 = " + utcDifference);
 
@@ -116,7 +116,7 @@ WA.onInit().then(() => {
 const openMapOverview = async() => {
     WA.ui.modal.closeModal();
     const pos = await WA.player.getPosition();
-    WA.ui.modal.openModal({ 
+    WA.ui.modal.openModal({
         src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
         allow: "fullscreen",
         title: "Map Overview",

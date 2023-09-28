@@ -46,17 +46,17 @@ WA.onInit().then(() => {
     bootstrapExtra().then(() => {
         const mapUrl = WA.room.mapURL
     const root = mapUrl.substring(0, mapUrl.lastIndexOf("/"))
-    
+
     // If the game is completed, just configure the popups, hidden tiles...
     if (WA.player.state.scavengerCompleted === true) {
         configureScavenger(root)
     } else if (
         // If at least one object has been found, don't show instructions
         WA.player.state.scavengerProgress &&
-        ((WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject1 || 
-        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject2 || 
-        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject3 || 
-        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 || 
+        ((WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject1 ||
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject2 ||
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject3 ||
+        (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 ||
         (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject5)) {
         configureScavenger(root)
         getClueRegularly()
@@ -94,7 +94,7 @@ WA.onInit().then(() => {
 // function to init the game
 function configureScavenger(root: string) {
     WA.controls.restorePlayerControls()
-    
+
     // add secret sentence button
     WA.ui.actionBar.addButton({
         id: "secrect-sentence",
@@ -165,10 +165,10 @@ function configureScavenger(root: string) {
 
     WA.room.area.onEnter('form').subscribe(() => {
         if(
-            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject1 && 
-            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject2 && 
-            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject3 && 
-            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 && 
+            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject1 &&
+            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject2 &&
+            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject3 &&
+            (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject4 &&
             (WA.player.state.scavengerProgress as ScavengerProgress).scavengerObject5) {
             stopClueRegularly()
             formPopup = WA.ui.openPopup("formPopup", "🎉🎉 Hurray! You've found all the time objects! Now you know our whole story 🎉🎉", [{
@@ -215,6 +215,7 @@ function configureScavenger(root: string) {
                     textColor: "#ffffff",
                     text: `Your new clue: ${getClue(true)}`,
                     closable: true,
+                    timeToClose: 120000,
                 })
             }, 1000)
         }
@@ -275,6 +276,7 @@ function getClueRegularly() {
                 textColor: "#ffffff",
                 text: `Your clue: ${clue}`,
                 closable: true,
+                timeToClose: 120000,
             })
         }
         return getClueRegularly()
@@ -291,7 +293,7 @@ function getClue(force = false): string|undefined{
     const progressState = WA.player.state.scavengerProgress as ScavengerProgress
 
     if(
-        progressState.scavengerObject1 === false && 
+        progressState.scavengerObject1 === false &&
         (lastClue != "scavengerObject1" || force)
     ) {
         lastClue = "scavengerObject1";
@@ -299,8 +301,8 @@ function getClue(force = false): string|undefined{
     }
 
     if(
-        progressState.scavengerObject1 && 
-        progressState.scavengerObject2 === false && 
+        progressState.scavengerObject1 &&
+        progressState.scavengerObject2 === false &&
         (lastClue != "scavengerObject2" || force)
     ) {
         lastClue = "scavengerObject2";
@@ -308,9 +310,9 @@ function getClue(force = false): string|undefined{
     }
 
     if(
-        progressState.scavengerObject1 && 
-        progressState.scavengerObject2 && 
-        progressState.scavengerObject3 === false && 
+        progressState.scavengerObject1 &&
+        progressState.scavengerObject2 &&
+        progressState.scavengerObject3 === false &&
         (lastClue != "scavengerObject3" || force)
     ) {
         lastClue = "scavengerObject3";
@@ -318,10 +320,10 @@ function getClue(force = false): string|undefined{
     }
 
     if(
-        progressState.scavengerObject1 && 
-        progressState.scavengerObject2 && 
-        progressState.scavengerObject3 && 
-        progressState.scavengerObject4 === false && 
+        progressState.scavengerObject1 &&
+        progressState.scavengerObject2 &&
+        progressState.scavengerObject3 &&
+        progressState.scavengerObject4 === false &&
         (lastClue != "scavengerObject4" || force)
     ) {
         lastClue = "scavengerObject4";
@@ -329,11 +331,11 @@ function getClue(force = false): string|undefined{
     }
 
     if(
-        progressState.scavengerObject1 && 
-        progressState.scavengerObject2 && 
-        progressState.scavengerObject3 && 
-        progressState.scavengerObject4 && 
-        progressState.scavengerObject5 === false && 
+        progressState.scavengerObject1 &&
+        progressState.scavengerObject2 &&
+        progressState.scavengerObject3 &&
+        progressState.scavengerObject4 &&
+        progressState.scavengerObject5 === false &&
         (lastClue != "scavengerObject5" || force)
     ) {
         lastClue = "scavengerObject5";
