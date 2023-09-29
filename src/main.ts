@@ -4,8 +4,8 @@ import { Popup } from "@workadventure/iframe-api-typings";
 import "./roofs";
 
 // Scavenger
-import "./scavenger/secretSentence";
-import "./scavenger/secretWay";
+//import "./scavenger/secretSentence";
+//import "./scavenger/secretWay";
 import "./meeting/doors"
 import "./funnel"
 
