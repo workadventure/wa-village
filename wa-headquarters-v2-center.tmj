@@ -2221,7 +2221,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-left.tmj#startFromBottom"
+                         "value":"\/@\/tcm\/workadventure\/wa-village-meeting#startFromBottom"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2238,7 +2238,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-left.tmj#startFromTop"
+                         "value":"\/@\/tcm\/workadventure\/wa-village-meeting#startFromTop"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2255,7 +2255,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-right.tmj#startFromBottom"
+                         "value":"\/@\/tcm\/workadventure\/wa-village-coworking#startFromLeftTop"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2272,7 +2272,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-right.tmj#startFromTop"
+                         "value":"\/@\/tcm\/workadventure\/wa-village-coworking#startFromTop"
                         }],
                  "rotation":0,
                  "type":"area",

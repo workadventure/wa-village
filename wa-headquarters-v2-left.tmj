@@ -1484,7 +1484,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-center.tmj#startFromLeftBottom"
+                         "value":"\/@\/tcm\/workadventure\/wa-village#startFromLeftBottom"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1501,7 +1501,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-center.tmj#startFromLeftTop"
+                         "value":"\/@\/tcm\/workadventure\/wa-village#startFromLeftTop"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3656,7 +3656,7 @@
         {
          "name":"mapName",
          "type":"string",
-         "value":"WA Village"
+         "value":"WA Village meeting"
         }, 
         {
          "name":"script",

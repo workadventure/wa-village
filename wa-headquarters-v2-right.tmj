@@ -1256,7 +1256,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-center.tmj#startFromRightBottom"
+                         "value":"\/@\/tcm\/workadventure\/wa-village#startFromRightBottom"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1273,7 +1273,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"wa-headquarters-v2-center.tmj#startFromRightTop"
+                         "value":"\/@\/tcm\/workadventure\/wa-village#startFromRightTop"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3428,7 +3428,7 @@
         {
          "name":"mapName",
          "type":"string",
-         "value":"WA Village"
+         "value":"WA Village coworking"
         }, 
         {
          "name":"script",
