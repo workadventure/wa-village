@@ -2255,7 +2255,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"\/@\/tcm\/workadventure\/wa-village-coworking#startFromLeftTop"
+                         "value":"\/@\/tcm\/workadventure\/wa-village-coworking#startFromBottom"
                         }],
                  "rotation":0,
                  "type":"area",
