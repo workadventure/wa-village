@@ -8170,33 +8170,6 @@
                         }]
                 }, 
                 {
-                 "id":213,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
-                {
-                 "id":214,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
-                {
-                 "id":215,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
-                {
                  "id":217,
                  "properties":[
                         {
@@ -8708,34 +8681,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                }, 
-                {
-                 "id":253,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
-                {
-                 "id":254,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
-                {
-                 "id":255,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
+                },
                 {
                  "id":257,
                  "properties":[
@@ -9248,34 +9194,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                }, 
-                {
-                 "id":293,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
-                {
-                 "id":294,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
-                {
-                 "id":295,
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"white-14"
-                        }]
-                }, 
+                },
                 {
                  "id":297,
                  "properties":[
