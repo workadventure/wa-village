@@ -13,6 +13,7 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 let popupPrivateOffice: Popup|null;
 let mapOverviewAction: any;
+let isDoorOpen = false;
 
 (async () => {
     await WA.onInit();
@@ -47,7 +48,13 @@ WA.onInit().then(() => {
         imageSrc: 'https://hugoaverty.github.io/map-overview/img/map.svg',
         toolTip: 'Map overview',
         callback: () => {
+            if(isDoorOpen){
+                WA.ui.modal.closeModal();
+                isDoorOpen = false;
+                return;
+            }
             openMapOverview();
+            isDoorOpen = true;
         }
     });
 
@@ -117,7 +124,9 @@ const openMapOverview = async() => {
     WA.ui.modal.closeModal();
     const pos = await WA.player.getPosition();
     WA.ui.modal.openModal({
-        src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
+        // TODO fix map overview projet
+        //src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
+        src: "https://workadventure.github.io/map-overview/img/ground-light.webp?x="+pos.x+"&y="+pos.y,
         allow: "fullscreen",
         title: "Map Overview",
         allowApi: true,
