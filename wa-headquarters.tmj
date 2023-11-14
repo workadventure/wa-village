@@ -2222,6 +2222,94 @@
                  "width":95.4337,
                  "x":4127.03062474747,
                  "y":1905.13435690236
+                }, 
+                {
+                 "height":1191,
+                 "id":1078,
+                 "name":"showroom",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"The showroom is a place where WorkAdventure is showcasing the projects done with its clients. It is a great place to start if visitors want to learn more about real-life projects done in WorkAdventure."
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":548,
+                 "x":4060,
+                 "y":1563
+                }, 
+                {
+                 "height":551,
+                 "id":1079,
+                 "name":"work desks",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"The place where the WorkAdventure team is usually working."
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":304,
+                 "x":2726,
+                 "y":1885
+                }, 
+                {
+                 "height":186,
+                 "id":1080,
+                 "name":"lobby",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"This is the entrance of the WorkAdventure office. The WorkAdventure office is a beautiful building."
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":91,
+                 "x":3291,
+                 "y":2332
+                }, 
+                {
+                 "height":158,
+                 "id":1081,
+                 "name":"quiet zone",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"People in the quiet zone don't want to be disturbed."
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":149,
+                 "x":3265,
+                 "y":2144
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4801,7 +4889,7 @@
          "y":0
         }],
  "nextlayerid":137,
- "nextobjectid":1078,
+ "nextobjectid":1082,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -4830,7 +4918,7 @@
          "value":"This map is the sole property of 100 Roads Inc. All rights are reserved by 100 Roads inc. All contents of the map may not be reproduced, distributed (for sale or otherwise), or create derivative works of the copyrighted work without the express written permission of 100 Roads Inc."
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.1",
+ "tiledversion":"1.10.2",
  "tileheight":32,
  "tilesets":[
         {
@@ -8681,7 +8769,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                },
+                }, 
                 {
                  "id":257,
                  "properties":[
@@ -9194,7 +9282,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                },
+                }, 
                 {
                  "id":297,
                  "properties":[
@@ -9916,8 +10004,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                },
-            
+                }, 
                 {
                  "id":387,
                  "properties":[
@@ -10088,7 +10175,8 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                }, 
+                },
+            
                 {
                  "id":399,
                  "properties":[
@@ -13717,8 +13805,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                },
-            
+                }, 
                 {
                  "id":734,
                  "properties":[
@@ -13889,7 +13976,8 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                }, 
+                },
+            
                 {
                  "id":746,
                  "properties":[
@@ -17518,8 +17606,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                },
-            
+                }, 
                 {
                  "id":1081,
                  "properties":[
@@ -17690,7 +17777,8 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                }, 
+                },
+            
                 {
                  "id":1093,
                  "properties":[
@@ -21319,8 +21407,7 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                },
-            
+                }, 
                 {
                  "id":1427,
                  "properties":[
@@ -21491,7 +21578,8 @@
                          "type":"string",
                          "value":"Press SPACE to open Jitsi"
                         }]
-                }, 
+                },
+            
                 {
                  "id":1439,
                  "properties":[
