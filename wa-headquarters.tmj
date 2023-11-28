@@ -7028,11 +7028,6 @@
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
