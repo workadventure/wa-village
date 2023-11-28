@@ -6433,7 +6433,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -6447,7 +6447,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -6461,7 +6461,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -6988,7 +6988,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -7002,7 +7002,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -7016,7 +7016,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -7543,7 +7543,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -7557,7 +7557,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -7571,7 +7571,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
