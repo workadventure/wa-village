@@ -6439,11 +6439,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -6463,11 +6458,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -6487,11 +6477,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -7024,11 +7009,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -7048,11 +7028,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -7072,11 +7047,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -7609,11 +7579,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -7633,11 +7598,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
@@ -7657,11 +7617,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"jitsiTriggerMessage",
-                         "type":"string",
-                         "value":"Press SPACE to open Jitsi"
                         }]
                 }, 
                 {
