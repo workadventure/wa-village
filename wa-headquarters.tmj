@@ -1993,7 +1993,7 @@
                 {
                  "height":32,
                  "id":1057,
-                 "name":"valdo",
+                 "name":"var",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -2004,7 +2004,7 @@
                 {
                  "height":32,
                  "id":1058,
-                 "name":"david",
+                 "name":"dan",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -2015,29 +2015,18 @@
                 {
                  "height":32,
                  "id":1059,
-                 "name":"gregoire",
+                 "name":"grp",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
                  "width":32,
-                 "x":2976,
-                 "y":2272
-                }, 
-                {
-                 "height":32,
-                 "id":1060,
-                 "name":"alexis",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":32,
-                 "x":2752,
-                 "y":2400
+                 "x":2814.32046332046,
+                 "y":2272.80437580438
                 }, 
                 {
                  "height":32,
                  "id":1061,
-                 "name":"gregory",
+                 "name":"grr",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -2048,7 +2037,7 @@
                 {
                  "height":32,
                  "id":1063,
-                 "name":"hugo",
+                 "name":"hua",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
