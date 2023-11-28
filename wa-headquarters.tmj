@@ -6433,17 +6433,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
@@ -6452,17 +6447,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
@@ -6471,17 +6461,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
@@ -7003,17 +6988,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
@@ -7022,7 +7002,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -7036,17 +7016,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
@@ -7568,17 +7543,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
@@ -7587,17 +7557,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
@@ -7606,17 +7571,12 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\" }"
                         }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"white-1"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
                         }]
                 }, 
                 {
