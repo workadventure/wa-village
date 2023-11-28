@@ -7022,7 +7022,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"startWithAudioMuted\": true }"
+                         "value":"{ \"startWithAudioMuted\": true, \"startWithVideoMuted\": true }"
                         }, 
                         {
                          "name":"jitsiRoom",
