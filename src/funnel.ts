@@ -5,7 +5,7 @@ console.log('Funnel script loaded');
 const openModalFunnel = () => {
     WA.ui.modal.openModal({
         title: "Funnel",
-        src: 'https://admin.workadventu.re/funnel/connection',
+        src: 'https://admin.workadventu.re/funnel/connection?embed=true',
         allow: "fullscreen; clipboard-read; clipboard-write",
         allowApi: true,
         position: "center",
