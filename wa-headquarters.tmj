@@ -1852,44 +1852,6 @@
                  "y":1684
                 }, 
                 {
-                 "height":0,
-                 "id":1023,
-                 "name":"doorMeetingFront",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"closeLayer",
-                         "type":"string",
-                         "value":"doors\/door_meeting_front_closed"
-                        }, 
-                        {
-                         "name":"default",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"door",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openLayer",
-                         "type":"string",
-                         "value":"doors\/door_meeting_front_open"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":90,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":1838,
-                 "y":2290
-                }, 
-                {
                  "height":132,
                  "id":1031,
                  "name":"popupPrivateOffice",
