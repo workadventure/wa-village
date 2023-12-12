@@ -65,18 +65,24 @@ WA.onInit().then(() => {
 const hideRoof1 = () => {
     WA.room.hideLayer("roof1");
     WA.room.hideLayer("sign1");
+    WA.room.hideLayer("roof1_1");
+    WA.room.hideLayer("Snow");
 }
 const showRoof1 = () => {
     WA.room.showLayer("roof1");
     WA.room.showLayer("sign1");
+    WA.room.showLayer("roof1_1");
+    WA.room.showLayer("Snow");
 }
 const showRoof2 = () => {
     WA.room.showLayer("roof2");
     WA.room.showLayer("sign2");
+    WA.room.showLayer("Snow");
 }
 const hideRoof2 = () => {
     WA.room.hideLayer("roof2");
     WA.room.hideLayer("sign2");
+    WA.room.hideLayer("Snow");
 }
 
 export {}
