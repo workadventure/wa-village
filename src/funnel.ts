@@ -14,14 +14,16 @@ const openModalFunnel = () => {
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-
     // Enter in the funnel area
     WA.room.area.onEnter("funnel").subscribe(() => {
         WA.ui.modal.closeModal();
+        WA.controls.disablePlayerControls();
         openModalFunnel();
     });
+
     WA.room.area.onLeave("funnel").subscribe(() => {
         WA.ui.modal.closeModal();
+        WA.controls.restorePlayerControls();
     });
 });
 
