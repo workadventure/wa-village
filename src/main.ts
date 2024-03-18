@@ -69,6 +69,18 @@ WA.onInit().then(() => {
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
+
+        if (WA.room.hashParameters.event === "remotework-marjo") {
+            WA.player.state.remoteworkmarjo = true;
+        }
+
+        if (WA.player.state.remoteworkmarjo === true) {
+            WA.room.hideLayer('conferenceDoor/closed');
+            WA.room.showLayer('conferenceDoor/open');
+        } else {
+            WA.room.showLayer('conferenceDoor/closed');
+            WA.room.hideLayer('conferenceDoor/open');
+        }
     }).catch(e => console.error(e));
 
 }).catch(e => console.error(e));
