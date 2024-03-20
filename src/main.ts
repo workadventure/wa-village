@@ -74,7 +74,7 @@ WA.onInit().then(() => {
             WA.player.state.remoteworkmarjo = true;
         }
 
-        if (WA.player.state.remoteworkmarjo === true || userTag.includes("speaker")) {
+        if (WA.player.state.remoteworkmarjo === true) {
             WA.room.hideLayer('conferenceDoor/closed');
             WA.room.showLayer('conferenceDoor/open');
         } else {
