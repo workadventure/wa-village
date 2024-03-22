@@ -2639,6 +2639,23 @@
                  "width":32,
                  "x":736,
                  "y":1696
+                }, 
+                {
+                 "height":208,
+                 "id":1083,
+                 "name":"jitsiMeetingRoom",
+                 "properties":[
+                        {
+                         "name":"jitsiRoom",
+                         "type":"string",
+                         "value":"AuditoriumStage"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":704,
+                 "x":320,
+                 "y":704
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5686,7 +5703,7 @@
          "y":0
         }],
  "nextlayerid":153,
- "nextobjectid":1083,
+ "nextobjectid":1084,
  "orientation":"orthogonal",
  "properties":[
         {
