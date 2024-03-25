@@ -2641,7 +2641,7 @@
                  "y":1696
                 }, 
                 {
-                 "height":176,
+                 "height":192,
                  "id":1083,
                  "name":"AuditoriumStage",
                  "properties":[
@@ -2658,9 +2658,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":704,
-                 "x":320,
-                 "y":736
+                 "width":704.5,
+                 "x":316,
+                 "y":734.5
                 }],
          "opacity":1,
          "type":"objectgroup",
