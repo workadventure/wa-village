@@ -1182,7 +1182,7 @@
          "name":"auditoriumStageBlocker",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":200,
          "x":0,
          "y":0
@@ -1788,9 +1788,9 @@
                  "y":1441.24993844333
                 }, 
                 {
-                 "height":702.902264827064,
+                 "height":767.56893149373,
                  "id":966,
-                 "name":"focus6",
+                 "name":"focusAuditorium",
                  "properties":[
                         {
                          "name":"chatName",
@@ -1810,9 +1810,9 @@
                  "rotation":0,
                  "type":"zone",
                  "visible":true,
-                 "width":943.522525179856,
-                 "x":200.386733299075,
-                 "y":704.063878725591
+                 "width":956.855858513189,
+                 "x":195.720066632408,
+                 "y":706.063878725591
                 }, 
                 {
                  "height":71,
@@ -2643,7 +2643,7 @@
                 {
                  "height":208,
                  "id":1083,
-                 "name":"jitsiMeetingRoom",
+                 "name":"AuditoriumStage",
                  "properties":[
                         {
                          "name":"jitsiRoom",
@@ -5173,7 +5173,7 @@
          "name":"roof1",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":200,
          "x":0,
          "y":0
@@ -5304,7 +5304,7 @@
          "name":"roof2",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":200,
          "x":0,
          "y":0
