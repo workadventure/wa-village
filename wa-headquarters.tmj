@@ -1788,7 +1788,7 @@
                  "y":1441.24993844333
                 }, 
                 {
-                 "height":767.56893149373,
+                 "height":788.902264827063,
                  "id":966,
                  "name":"focusAuditorium",
                  "properties":[
@@ -1811,8 +1811,8 @@
                  "type":"zone",
                  "visible":true,
                  "width":956.855858513189,
-                 "x":195.720066632408,
-                 "y":706.063878725591
+                 "x":192,
+                 "y":746.666666666667
                 }, 
                 {
                  "height":71,
@@ -2641,7 +2641,7 @@
                  "y":1696
                 }, 
                 {
-                 "height":208,
+                 "height":176,
                  "id":1083,
                  "name":"AuditoriumStage",
                  "properties":[
@@ -2649,13 +2649,18 @@
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"AuditoriumStage"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"speaker"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
                  "width":704,
                  "x":320,
-                 "y":704
+                 "y":736
                 }],
          "opacity":1,
          "type":"objectgroup",
