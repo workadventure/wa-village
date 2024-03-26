@@ -2659,8 +2659,8 @@
                  "type":"area",
                  "visible":true,
                  "width":704.5,
-                 "x":316,
-                 "y":734.5
+                 "x":314.666666666667,
+                 "y":736.166666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
