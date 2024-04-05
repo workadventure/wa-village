@@ -3861,7 +3861,7 @@
                  "name":"door_coworking_closed",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":200,
                  "x":0,
                  "y":0
@@ -3992,7 +3992,7 @@
                  "name":"door_coworking_open",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":200,
                  "x":0,
                  "y":0
