@@ -15,6 +15,16 @@ WA.onInit().then(() => {
         WA.room.hideLayer('doors/door_office_meeting_opened');
     });
 
+    WA.room.area.onEnter('roof_coworking_area').subscribe(() => {
+        WA.room.hideLayer('doors/door_coworking_closed');
+        WA.room.showLayer('doors/door_coworking_open');
+    });
+
+    WA.room.area.onLeave('roof_coworking_area').subscribe(() => {
+        WA.room.showLayer('doors/door_coworking_closed');
+        WA.room.hideLayer('doors/door_coworking_open');
+    });
+
 });
 
 export {};
