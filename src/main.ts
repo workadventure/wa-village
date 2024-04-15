@@ -66,28 +66,9 @@ WA.onInit().then(() => {
         popupPrivateOffice = null;
     })
 
-    WA.room.area.onEnter("focusAuditorium").subscribe(() => {
-        if (userTag.includes("speaker" || userTag.includes("admin"))) {
-            WA.room.hideLayer('auditoriumStageBlocker')
-        }
-    });
-
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
-
-        if (WA.room.hashParameters.event === "remotework-marjo") {
-            WA.player.state.hasAccessToEvent = true;
-        }
-
-        if (WA.player.state.hasAccessToEvent === true) {
-            // Open the doors only for people with the right link
-            WA.room.hideLayer('conferenceDoor/closed');
-            WA.room.showLayer('conferenceDoor/open');
-        } else {
-            WA.room.showLayer('conferenceDoor/closed');
-            WA.room.hideLayer('conferenceDoor/open');
-        }
     }).catch(e => console.error(e));
 
 }).catch(e => console.error(e));
