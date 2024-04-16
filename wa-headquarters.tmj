@@ -2393,6 +2393,23 @@
                  "width":704.5,
                  "x":314.666666666667,
                  "y":736.166666666667
+                }, 
+                {
+                 "height":1120,
+                 "id":1084,
+                 "name":"coWorkingChat",
+                 "properties":[
+                        {
+                         "name":"chatName",
+                         "type":"string",
+                         "value":"Co-Working"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":1088,
+                 "x":5216,
+                 "y":1728
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5440,7 +5457,7 @@
          "y":0
         }],
  "nextlayerid":153,
- "nextobjectid":1084,
+ "nextobjectid":1085,
  "orientation":"orthogonal",
  "properties":[
         {
