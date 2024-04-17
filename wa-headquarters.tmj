@@ -1527,7 +1527,7 @@
                         {
                          "name":"chatName",
                          "type":"string",
-                         "value":"\u00c9v\u00e8nement 26 mars"
+                         "value":"Auditorium"
                         }, 
                         {
                          "name":"focusable",
