@@ -8,7 +8,6 @@ import "./funnel"
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 let popupPrivateOffice: Popup|null;
-let isDoorOpen = false;
 
 (async () => {
     await WA.onInit();
@@ -30,23 +29,6 @@ WA.onInit().then(() => {
 
     WA.room.onLeaveLayer("start").subscribe(() => {
         WA.ui.modal.closeModal();
-    });
-
-    WA.ui.actionBar.addButton({
-        id: 'map-btn',
-        // @ts-ignore
-        type: 'action',
-        imageSrc: 'https://hugoaverty.github.io/map-overview/img/map.svg',
-        toolTip: 'Map overview',
-        callback: () => {
-            if(isDoorOpen){
-                WA.ui.modal.closeModal();
-                isDoorOpen = false;
-                return;
-            }
-            openMapOverview();
-            isDoorOpen = true;
-        }
     });
 
     // Open & Close popupPrivateOffice
@@ -72,19 +54,5 @@ WA.onInit().then(() => {
     }).catch(e => console.error(e));
 
 }).catch(e => console.error(e));
-
-const openMapOverview = async() => {
-    WA.ui.modal.closeModal();
-    const pos = await WA.player.getPosition();
-    WA.ui.modal.openModal({
-        // TODO fix map overview projet
-        //src: "https://hugoaverty.github.io/map-overview/index.html?x="+pos.x+"&y="+pos.y+"",
-        src: "https://workadventure.github.io/map-overview/img/ground-light.webp?x="+pos.x+"&y="+pos.y,
-        allow: "fullscreen",
-        title: "Map Overview",
-        allowApi: true,
-        position: "center",
-    });
-}
 
 export {};
