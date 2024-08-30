@@ -1251,23 +1251,6 @@
                  "y":444.677033888228
                 }, 
                 {
-                 "height":223.463565012214,
-                 "id":939,
-                 "name":"silent",
-                 "properties":[
-                        {
-                         "name":"silent",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"zone",
-                 "visible":true,
-                 "width":254.151172453433,
-                 "x":3232.91726033195,
-                 "y":2783.57491215469
-                }, 
-                {
                  "height":704.360313131313,
                  "id":944,
                  "name":"focus1",
