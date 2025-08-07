@@ -39,8 +39,6 @@ let isOpenSecretSentenceWebsite = false
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    // force user to read the instructions
-    WA.controls.disablePlayerControls()
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
